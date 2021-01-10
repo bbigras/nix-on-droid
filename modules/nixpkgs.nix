@@ -54,9 +54,9 @@ let
     merge = lib.mergeOneOption;
   };
 
-  _pkgs = import <nixpkgs> (
-    filterAttrs (n: v: v != null) config.nixpkgs
-  );
+  #_pkgs = import pkgs (
+  #  filterAttrs (n: v: v != null) config.nixpkgs
+  #);
 
 in
 
@@ -164,9 +164,9 @@ in
 
   config = {
 
-    _module.args.pkgs = _pkgs;
+    #_module.args.pkgs = pkgs;
 
-    nixpkgs.overlays = import ../overlays;
+    #nixpkgs.overlays = import ../overlays;
 
   };
 }
