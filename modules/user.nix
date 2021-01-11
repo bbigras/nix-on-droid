@@ -10,8 +10,8 @@ let
   idsDerivation = pkgs.runCommandLocal "ids.nix" {} ''
     cat > $out <<EOF
     {
-      gid = "$(${pkgs.coreutils}/bin/id -g)";
-      uid = "$(${pkgs.coreutils}/bin/id -u)";
+      gid = "10202";
+      uid = "10202";
     }
     EOF
   '';
